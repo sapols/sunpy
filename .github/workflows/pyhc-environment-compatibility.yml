@@ -17,4 +17,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Check PyHC Environment Compatibility
-        uses: heliophysicsPy/pyhc-actions/pyhc-env-compat@fix-empty-package-resolution-list
+        uses: heliophysicsPy/pyhc-actions/pyhc-env-compat@v1
