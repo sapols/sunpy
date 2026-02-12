@@ -17,4 +17,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Check PHEP 3 Compliance
-        uses: heliophysicsPy/pyhc-actions/phep3-compliance@main
+        uses: heliophysicsPy/pyhc-actions/phep3-compliance@v1
