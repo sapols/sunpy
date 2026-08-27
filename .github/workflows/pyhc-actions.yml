@@ -16,21 +16,27 @@ on:
     - cron: '0 15 1 1,4,7,10 *'
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   phep3-compliance:
     name: PHEP 3 Compliance
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
       - name: Check PHEP 3 Compliance
-        uses: heliophysicsPy/pyhc-actions/phep3-compliance@v1
+        uses: heliophysicsPy/pyhc-actions/phep3-compliance@d0d1fb451f8189b17c2113efa3a91b615f3074a0 # v1.1.2
 
   pyhc-env-compat:
     name: PyHC Environment Compatibility
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
       - name: Check PyHC Environment Compatibility
-        uses: heliophysicsPy/pyhc-actions/pyhc-env-compat@v1
+        uses: heliophysicsPy/pyhc-actions/pyhc-env-compat@d0d1fb451f8189b17c2113efa3a91b615f3074a0 # v1.1.2
